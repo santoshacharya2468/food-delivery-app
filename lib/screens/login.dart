@@ -1,10 +1,7 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:foodsNepal/bloc/auth/auth_bloc.dart';
 import 'package:foodsNepal/models/user.dart';
-import '../conf.dart';
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -102,86 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                                                     user.email=emailController.text;
                                                     user.password=passwordController.text;
                                                     BlocProvider.of<AuthBloc>(context).add(AuthLoginEvent(user: user));
-                                                    // setState(() {
-                                                    //   isProcessing = true;
-                                                    // });
-                                                    // Dio dio = Dio(BaseOptions(
-                                                    //     headers: {
-                                                    //       "apikey": apiKey,
-                                                    //     },
-                                                    //     validateStatus:
-                                                    //         (status) => true,
-                                                    //     baseUrl: baseUrl));
-                                                    // //make http request to server
-                                                    // try {
-                                                    //   var response = await dio
-                                                    //       .post(
-                                                    //           "account/login",
-                                                    //           data: {
-                                                    //         "email":
-                                                    //             emailController
-                                                    //                 .text,
-                                                    //         "password":
-                                                    //             passwordController
-                                                    //                 .text
-                                                    //       });
-                                                    //   setState(() {
-                                                    //     isProcessing = false;
-                                                    //   });
-                                                    //   if (response.statusCode ==
-                                                    //       200) {
-                                                    //     FlutterSecureStorage
-                                                    //         storage =
-                                                    //         FlutterSecureStorage();
-                                                    //     var token = response
-                                                    //         .data['token'];
-                                                    //     var email =
-                                                    //         emailController
-                                                    //             .text;
-                                                    //     await storage.write(
-                                                    //         key: "email",
-                                                    //         value: email);
-                                                    //     await storage.write(
-                                                    //         key: "token",
-                                                    //         value: token);
-                                                    //     User user = new User();
-                                                    //     user.email = email;
-                                                    //     user.token = token;
-                                                    //     BlocProvider.of<AuthBloc>(context).add(
-                                                    //         AuthLoginEvent(
-                                                    //             user: user));
-                                                    //     Navigator.pop(context);
-                                                    //   } else if (response
-                                                    //           .statusCode ==
-                                                    //       401) {
-                                                    //     Scaffold.of(context)
-                                                    //         .showSnackBar(
-                                                    //             SnackBar(
-                                                    //       content: Text(response
-                                                    //           .data['message']),
-                                                    //       backgroundColor:
-                                                    //           Colors.red[400],
-                                                    //     ));
-                                                    //   } else {
-                                                    //     Scaffold.of(context)
-                                                    //         .showSnackBar(
-                                                    //             SnackBar(
-                                                    //       content: Text(
-                                                    //           "Server Error"),
-                                                    //       backgroundColor:
-                                                    //           Colors.red[400],
-                                                    //     ));
-                                                    //   }
-                                                    // } catch (e) {
-                                                    //   Scaffold.of(context)
-                                                    //       .showSnackBar(
-                                                    //           SnackBar(
-                                                    //     content: Text(
-                                                    //         "Internet Error"),
-                                                    //     backgroundColor:
-                                                    //         Colors.red[400],
-                                                    //   ));
-                                                    // }
+                                                
                                                   } else {
                                                     //do nothing;
                                                   }

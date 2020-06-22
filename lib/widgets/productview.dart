@@ -34,7 +34,7 @@ class _ProductViewState extends State<ProductView> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                 Container(
-                    height: 100.0,
+                    height: 98.0,
                     width: MediaQuery.of(context).size.width / 2 - 10,
                     child: Hero(
                       tag: p.name,

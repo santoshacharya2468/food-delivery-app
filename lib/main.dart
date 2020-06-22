@@ -33,8 +33,10 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         onGenerateRoute: RouteGenerator.generateRoute,
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primaryColor: Colors.teal,
+          
         ),
         home: HomePage(),
       ),

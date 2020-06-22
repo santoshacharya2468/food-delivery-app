@@ -5,7 +5,7 @@ import 'screens/login.dart';
 import 'screens/register.dart';
 const baseUrl="https://parewa.herokuapp.com/";
 const apiKey="123#@!";
-const appName="FoodsNepal";
+const appName="FoodsDelivery";
 class RouteGenerator{
   static Route<dynamic> generateRoute(RouteSettings settings){
     switch(settings.name){
